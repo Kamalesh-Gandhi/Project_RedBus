@@ -1,0 +1,109 @@
+route_no,state_name,route_name,route_ref
+1,Kadamba Transport Corporation Limited (KTCL),Pune to Goa,https://www.redbus.in/bus-tickets/pune-to-goa
+2,Kadamba Transport Corporation Limited (KTCL),Goa to Pune,https://www.redbus.in/bus-tickets/goa-to-pune
+3,Kadamba Transport Corporation Limited (KTCL),Mumbai to Goa,https://www.redbus.in/bus-tickets/mumbai-to-goa
+4,Kadamba Transport Corporation Limited (KTCL),Goa to Mumbai,https://www.redbus.in/bus-tickets/goa-to-mumbai
+5,Kadamba Transport Corporation Limited (KTCL),Pandharpur to Goa,https://www.redbus.in/bus-tickets/pandharpur-to-goa
+6,Kadamba Transport Corporation Limited (KTCL),Bangalore to Goa,https://www.redbus.in/bus-tickets/bangalore-to-goa
+7,Kadamba Transport Corporation Limited (KTCL),Goa to Pandharpur,https://www.redbus.in/bus-tickets/goa-to-pandharpur
+8,Kadamba Transport Corporation Limited (KTCL),Belagavi to Goa,https://www.redbus.in/bus-tickets/belagavi-to-goa
+9,Kadamba Transport Corporation Limited (KTCL),Goa to Bangalore,https://www.redbus.in/bus-tickets/goa-to-bangalore
+10,Kadamba Transport Corporation Limited (KTCL),Solapur to Goa,https://www.redbus.in/bus-tickets/solapur-to-goa
+11,Kadamba Transport Corporation Limited (KTCL),Goa to Kolhapur(Maharashtra),https://www.redbus.in/bus-tickets/goa-to-kolhapur-maharashtra
+12,Kadamba Transport Corporation Limited (KTCL),Goa to Solapur,https://www.redbus.in/bus-tickets/goa-to-solapur
+13,Kadamba Transport Corporation Limited (KTCL),Goa to Sangola (Solapur),https://www.redbus.in/bus-tickets/goa-to-sangola
+14,Kadamba Transport Corporation Limited (KTCL),Sangola (Solapur) to Goa,https://www.redbus.in/bus-tickets/sangola-to-goa
+15,Kadamba Transport Corporation Limited (KTCL),Calangute (goa) to Goa Airport,https://www.redbus.in/bus-tickets/calangute-goa-to-goa-airport
+16,Kadamba Transport Corporation Limited (KTCL),Goa to Sangli,https://www.redbus.in/bus-tickets/goa-to-sangli
+17,Kadamba Transport Corporation Limited (KTCL),Calangute (goa) to Mopa Airport,https://www.redbus.in/bus-tickets/calangute-goa-to-mopa-airport
+18,Kadamba Transport Corporation Limited (KTCL),Mopa Airport to Calangute (goa),https://www.redbus.in/bus-tickets/mopa-airport-to-calangute-goa
+19,Kadamba Transport Corporation Limited (KTCL),Ponda to Belagavi,https://www.redbus.in/bus-tickets/ponda-to-belagavi
+20,Kadamba Transport Corporation Limited (KTCL),Goa to Miraj,https://www.redbus.in/bus-tickets/goa-to-miraj
+21,Kadamba Transport Corporation Limited (KTCL),Goa Airport to Calangute (goa),https://www.redbus.in/bus-tickets/goa-airport-to-calangute-goa
+22,Kadamba Transport Corporation Limited (KTCL),Marcel to Belagavi,https://www.redbus.in/bus-tickets/marcel-to-belagavi
+23,Kadamba Transport Corporation Limited (KTCL),Shivamogga to Goa,https://www.redbus.in/bus-tickets/shimoga-to-goa
+24,Kadamba Transport Corporation Limited (KTCL),Goa to Mopa Airport,https://www.redbus.in/bus-tickets/goa-to-mopa-airport
+25,Kadamba Transport Corporation Limited (KTCL),Goa to Satara,https://www.redbus.in/bus-tickets/goa-to-satara
+26,Kadamba Transport Corporation Limited (KTCL),Belagavi to Marcel,https://www.redbus.in/bus-tickets/belagavi-to-marcel
+27,Kadamba Transport Corporation Limited (KTCL),Mopa Airport to Goa,https://www.redbus.in/bus-tickets/mopa-airport-to-goa
+28,Kadamba Transport Corporation Limited (KTCL),Shirdi to Goa,https://www.redbus.in/bus-tickets/shirdi-to-goa
+29,Kadamba Transport Corporation Limited (KTCL),Goa to Shivamogga,https://www.redbus.in/bus-tickets/goa-to-shimoga
+30,Kadamba Transport Corporation Limited (KTCL),Goa to Shirdi,https://www.redbus.in/bus-tickets/goa-to-shirdi
+31,Kadamba Transport Corporation Limited (KTCL),Goa to Goa Airport,https://www.redbus.in/bus-tickets/goa-to-goa-airport
+32,Kadamba Transport Corporation Limited (KTCL),Margao to Mopa Airport,https://www.redbus.in/bus-tickets/margoa-to-mopa-airport
+33,Kadamba Transport Corporation Limited (KTCL),Goa Airport to Goa,https://www.redbus.in/bus-tickets/goa-airport-to-goa
+34,Kadamba Transport Corporation Limited (KTCL),Mopa Airport to Margao,https://www.redbus.in/bus-tickets/mopa-airport-to-margoa
+35,Kadamba Transport Corporation Limited (KTCL),Belagavi to Saquelim,https://www.redbus.in/bus-tickets/belagavi-to-saquelim
+36,Kadamba Transport Corporation Limited (KTCL),Panaji to Mopa Airport,https://www.redbus.in/bus-tickets/panaji-to-mopa-airport
+37,Kadamba Transport Corporation Limited (KTCL),Saquelim to Belagavi,https://www.redbus.in/bus-tickets/saquelim-to-belagavi
+38,Kadamba Transport Corporation Limited (KTCL),Calangute (goa) to Goa,https://www.redbus.in/bus-tickets/calangute-goa-to-goa
+39,Kadamba Transport Corporation Limited (KTCL),Calangute (goa) to Panaji,https://www.redbus.in/bus-tickets/calangute-goa-to-panaji
+40,Kadamba Transport Corporation Limited (KTCL),Goa Airport to Panaji,https://www.redbus.in/bus-tickets/goa-airport-to-panaji
+41,KSRTC (Kerala),Bangalore to Kozhikode,https://www.redbus.in/bus-tickets/bangalore-to-kozhikode
+42,KSRTC (Kerala),Kozhikode to Ernakulam,https://www.redbus.in/bus-tickets/kozhikode-to-ernakulam
+43,KSRTC (Kerala),Kozhikode to Bangalore,https://www.redbus.in/bus-tickets/kozhikode-to-bangalore
+44,KSRTC (Kerala),Ernakulam to Kozhikode,https://www.redbus.in/bus-tickets/ernakulam-to-kozhikode
+45,KSRTC (Kerala),Kozhikode to Mysore,https://www.redbus.in/bus-tickets/kozhikode-to-mysore
+46,KSRTC (Kerala),Kozhikode to Thiruvananthapuram,https://www.redbus.in/bus-tickets/kozhikode-to-thiruvananthapuram
+47,KSRTC (Kerala),Bangalore to Kalpetta (kerala),https://www.redbus.in/bus-tickets/bangalore-to-kalpetta
+48,KSRTC (Kerala),Mysore to Kozhikode,https://www.redbus.in/bus-tickets/mysore-to-kozhikode
+49,KSRTC (Kerala),Kalpetta (kerala) to Bangalore,https://www.redbus.in/bus-tickets/kalpetta-to-bangalore
+50,KSRTC (Kerala),Kozhikode to Thrissur,https://www.redbus.in/bus-tickets/kozhikode-to-thrissur
+51,KSRTC (Kerala),Thiruvananthapuram to Kozhikode,https://www.redbus.in/bus-tickets/thiruvananthapuram-to-kozhikode
+52,KSRTC (Kerala),Bangalore to Kannur,https://www.redbus.in/bus-tickets/bangalore-to-kannur
+53,KSRTC (Kerala),Kozhikode to Kottayam,https://www.redbus.in/bus-tickets/kozhikode-to-kottayam
+54,KSRTC (Kerala),Kannur to Bangalore,https://www.redbus.in/bus-tickets/kannur-to-bangalore
+55,KSRTC (Kerala),Kottayam to Kozhikode,https://www.redbus.in/bus-tickets/kottayam-to-kozhikode
+56,KSRTC (Kerala),Thrissur to Kozhikode,https://www.redbus.in/bus-tickets/thrissur-to-kozhikode
+57,KSRTC (Kerala),Kozhikode to Kalpetta (kerala),https://www.redbus.in/bus-tickets/kozhikode-to-kalpetta
+58,KSRTC (Kerala),Coimbatore to Ooty,https://www.redbus.in/bus-tickets/coimbatore-to-ooty
+59,KSRTC (Kerala),Kalpetta (kerala) to Kozhikode,https://www.redbus.in/bus-tickets/kalpetta-to-kozhikode
+60,APSRTC,Vijayawada to Hyderabad,https://www.redbus.in/bus-tickets/vijayawada-to-hyderabad
+61,APSRTC,Hyderabad to Vijayawada,https://www.redbus.in/bus-tickets/hyderabad-to-vijayawada
+62,APSRTC,Kakinada to Visakhapatnam,https://www.redbus.in/bus-tickets/kakinada-to-visakhapatnam
+63,APSRTC,Visakhapatnam to Kakinada,https://www.redbus.in/bus-tickets/visakhapatnam-to-kakinada
+64,APSRTC,Chittoor (Andhra Pradesh) to Bangalore,https://www.redbus.in/bus-tickets/chittoor-andhra-pradesh-to-bangalore
+65,APSRTC,Kadapa to Bangalore,https://www.redbus.in/bus-tickets/kadapa-to-bangalore
+66,APSRTC,Anantapur (andhra pradesh) to Bangalore,https://www.redbus.in/bus-tickets/ananthapur-to-bangalore
+67,APSRTC,Tirupati to Bangalore,https://www.redbus.in/bus-tickets/tirupathi-to-bangalore
+68,APSRTC,Visakhapatnam to Vijayawada,https://www.redbus.in/bus-tickets/visakhapatnam-to-vijayawada
+69,APSRTC,Ongole to Hyderabad,https://www.redbus.in/bus-tickets/ongole-to-hyderabad
+70,APSRTC,Bangalore to Tirupati,https://www.redbus.in/bus-tickets/bangalore-to-tirupathi
+71,APSRTC,Macherla (andhra pradesh) to Hyderabad,https://www.redbus.in/bus-tickets/macherla-to-hyderabad
+72,APSRTC,Rajahmundry to Visakhapatnam,https://www.redbus.in/bus-tickets/rajahmundry-to-visakhapatnam
+73,APSRTC,Nandyal to Hyderabad,https://www.redbus.in/bus-tickets/nandyala-to-hyderabad
+74,APSRTC,Bangalore to Kadapa,https://www.redbus.in/bus-tickets/bangalore-to-kadapa
+75,APSRTC,Hyderabad to Ongole,https://www.redbus.in/bus-tickets/hyderabad-to-ongole
+76,APSRTC,Guntur (Andhra Pradesh) to Hyderabad,https://www.redbus.in/bus-tickets/guntur-to-hyderabad
+77,APSRTC,Vijayawada to Visakhapatnam,https://www.redbus.in/bus-tickets/vijayawada-to-visakhapatnam
+78,APSRTC,Rajahmundry to Vijayawada,https://www.redbus.in/bus-tickets/rajahmundry-to-vijayawada
+79,APSRTC,Hyderabad to Kurnool,https://www.redbus.in/bus-tickets/hyderabad-to-kurnool
+80,APSRTC,Bangalore to Chittoor (Andhra Pradesh),https://www.redbus.in/bus-tickets/bangalore-to-chittoor-andhra-pradesh
+81,APSRTC,Kurnool to Hyderabad,https://www.redbus.in/bus-tickets/kurnool-to-hyderabad
+82,APSRTC,Visakhapatnam to Rajahmundry,https://www.redbus.in/bus-tickets/visakhapatnam-to-rajahmundry
+83,APSRTC,Rayachoti to Bangalore,https://www.redbus.in/bus-tickets/rayachoti-to-bangalore
+84,APSRTC,Vinukonda to Hyderabad,https://www.redbus.in/bus-tickets/vinukonda-to-hyderabad
+85,APSRTC,Bangalore to Anantapur (andhra pradesh),https://www.redbus.in/bus-tickets/bangalore-to-ananthapur
+86,APSRTC,Amalapuram to Visakhapatnam,https://www.redbus.in/bus-tickets/amalapuram-to-visakhapatnam
+87,APSRTC,Vijayawada to Tirupati,https://www.redbus.in/bus-tickets/vijayawada-to-tirupathi
+88,APSRTC,Madanapalli to Bangalore,https://www.redbus.in/bus-tickets/madanapalli-to-bangalore
+89,APSRTC,Narasaraopet to Hyderabad,https://www.redbus.in/bus-tickets/narsaraopet-to-hyderabad
+90,APSRTC,Eluru to Hyderabad,https://www.redbus.in/bus-tickets/eluru-to-hyderabad
+91,APSRTC,Visakhapatnam to Amalapuram,https://www.redbus.in/bus-tickets/visakhapatnam-to-amalapuram
+92,APSRTC,Kadiri to Bangalore,https://www.redbus.in/bus-tickets/kadiri-to-bangalore
+93,APSRTC,Chennai to Tirupati,https://www.redbus.in/bus-tickets/chennai-to-tirupathi
+94,APSRTC,Rajahmundry to Hyderabad,https://www.redbus.in/bus-tickets/rajahmundry-to-hyderabad
+95,APSRTC,Kurnool to Vijayawada,https://www.redbus.in/bus-tickets/kurnool-to-vijayawada
+96,APSRTC,Vijayawada to Kurnool,https://www.redbus.in/bus-tickets/vijayawada-to-kurnool
+97,APSRTC,Kakinada to Vijayawada,https://www.redbus.in/bus-tickets/kakinada-to-vijayawada
+98,APSRTC,Bangalore to Madanapalli,https://www.redbus.in/bus-tickets/bangalore-to-madanapalli
+99,APSRTC,Nellore to Bangalore,https://www.redbus.in/bus-tickets/nellore-to-bangalore
+100,APSRTC,Hyderabad to Narasaraopet,https://www.redbus.in/bus-tickets/hyderabad-to-narsaraopet
+101,APSRTC,Hyderabad to Guntur (Andhra Pradesh),https://www.redbus.in/bus-tickets/hyderabad-to-guntur
+102,APSRTC,Bangalore to Kadiri,https://www.redbus.in/bus-tickets/bangalore-to-kadiri
+103,APSRTC,Vijayawada to Rajahmundry,https://www.redbus.in/bus-tickets/vijayawada-to-rajahmundry
+104,APSRTC,Bangalore to Rayachoti,https://www.redbus.in/bus-tickets/bangalore-to-rayachoti
+105,APSRTC,Kurnool to Bangalore,https://www.redbus.in/bus-tickets/kurnool-to-bangalore
+106,APSRTC,Tirupati to Chennai,https://www.redbus.in/bus-tickets/tirupathi-to-chennai
+107,APSRTC,Hyderabad to Anantapur (andhra pradesh),https://www.redbus.in/bus-tickets/hyderabad-to-ananthapur
+108,APSRTC,Anantapur (andhra pradesh) to Hyderabad,https://www.redbus.in/bus-tickets/ananthapur-to-hyderabad
