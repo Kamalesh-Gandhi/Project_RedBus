@@ -51,6 +51,8 @@ def BusRoutes_link(States_Page_Links,StatesNames):
         x = 0
         wait = WebDriverWait(driver, 10)
 
+        print("Total States routes links: ",len(States_Page_Links))
+
         for i in States_Page_Links:
             driver.get(i)
             time.sleep(2)
