@@ -47,6 +47,7 @@ def BusRoutes_link(States_Page_Links,StatesNames):
     try:
         Busrouteslinks = []
         Routes_link  = []
+        Route_NO=1
         x = 0
         wait = WebDriverWait(driver, 10)
 
@@ -62,9 +63,9 @@ def BusRoutes_link(States_Page_Links,StatesNames):
                 for j in route:
                     route_l=j.get_attribute('href')
                     Routes_link.append(route_l)
-                    route_name_link=(StatesNames[x],j.get_attribute('title'),j.get_attribute('href'))
+                    route_name_link=(Route_NO,StatesNames[x],j.get_attribute('title'),j.get_attribute('href'))
                     Busrouteslinks.append(route_name_link)
-
+                    Route_NO += 1
             except Exception as e:
                 pass
 
@@ -85,8 +86,9 @@ def BusRoutes_link(States_Page_Links,StatesNames):
                     for j in route:
                         route_l=j.get_attribute('href')
                         Routes_link.append(route_l)
-                        route_name_link=(StatesNames[x],j.get_attribute('title'),j.get_attribute('href'))
+                        route_name_link=(Route_NO,StatesNames[x],j.get_attribute('title'),j.get_attribute('href'))
                         Busrouteslinks.append(route_name_link)
+                        Route_NO += 1
                
                 except Exception as e:
                     print("The Bus_routes_links Error ")
@@ -107,7 +109,7 @@ def BUSDETAILS(busrouteslink):
     try:
 
         BusDetails = []
-        Route_NO = 1
+        Bus_NO = 1
         for link in busrouteslink:
 
             print( "The link: ", link,"\n")
@@ -156,9 +158,9 @@ def BUSDETAILS(busrouteslink):
                 Ticket_Price = i.find_element(By.CSS_SELECTOR,'span.f-19.f-bold').text
                 SeatAvailability = i.find_element(By.CSS_SELECTOR,'div.seat-left').text.split()[0]
 
-                BusDetails.append((Route_NO,BusNames,BusType,DepartureTime,TravellingTime,ReachingTime,StarRating,Ticket_Price,SeatAvailability ))
+                BusDetails.append((Bus_NO,BusNames,BusType,DepartureTime,TravellingTime,ReachingTime,StarRating,Ticket_Price,SeatAvailability ))
 
-            Route_NO += 1    
+            Bus_NO += 1    
 
     except Exception as e:
         print("The Error reason: ",e)
@@ -196,18 +198,18 @@ time.sleep(2)
 
 # Extracting the BusRoutesLinks from all the States
 busrouteslink,routelink = BusRoutes_link(States_Page_Links,StatesNames)
-df2 = pd.DataFrame(data=busrouteslink,columns=['States Transportation Name','Bus Routes','Bus Routes Link']) 
-append_to_csv('busRoutesLinks.csv', df2)
+df2 = pd.DataFrame(data=busrouteslink,columns=['Route_NO','States Transportation Name','Bus Routes','Bus Routes Link']) 
+append_to_csv('route_data.csv', df2)
 # df2.to_csv('busRoutesLinks.csv',index=False,mode='w')
 print(busrouteslink,routelink)
 print(df2.to_string(),"\n")
 
-# # Extracting the Bus details from all the bus routes 
-# busdetails = BUSDETAILS(routelink)
-# df3 = pd.DataFrame(data=busdetails,columns=['Route_NO','Bus Name','Bus Type','Departure Time','Travelling Time','Reaching Time','Bus Rating','Ticket Price','Seat Availability'])   
-# append_to_csv('bus_details.csv', df3) 
-# # df3.to_csv('bus_details4.csv', index=False,mode='w')
-# print(df3,"\n")
+# Extracting the Bus details from all the bus routes 
+busdetails = BUSDETAILS(routelink)
+df3 = pd.DataFrame(data=busdetails,columns=['Bus_NO','Bus Name','Bus Type','Departure Time','Travelling Time','Reaching Time','Bus Rating','Ticket Price','Seat Availability'])   
+append_to_csv('bus_data.csv', df3) 
+# df3.to_csv('bus_details4.csv', index=False,mode='w')
+print(df3,"\n")
 
 # Closing the Driver 
 closingdriver()
