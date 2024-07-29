@@ -59,7 +59,7 @@ conn = connection()
 st.set_page_config(page_title="Redbus", page_icon=":oncoming_bus:", layout="wide")
 
 # Load custom CSS from file
-with open("styles.css") as f:
+with open("Customization_styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
