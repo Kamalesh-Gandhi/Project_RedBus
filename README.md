@@ -50,19 +50,19 @@ Selenium Python bindings provide a convenient API to access Selenium WebDrivers 
 
 - **MySQL:**
 
-  `              `MySQL, the most popular Open-Source SQL database management system, is developed, distributed, and supported by 
+  ` `MySQL, the most popular Open-Source SQL database management system, is developed, distributed, and supported by 
 
-  `              `Oracle Corporation. 
+  ` `Oracle Corporation. 
 
-  `               `To know more about **MySQL**. Click here <https://dev.mysql.com/doc/refman/9.0/en/>
+  ` `To know more about **MySQL**. Click here <https://dev.mysql.com/doc/refman/9.0/en/>
 
 - **Streamlit-Option-Menu:**
   **
-  `                                         `Streamlit-option-menu is a simple Streamlit component that allows users to select a single item from a
+  ` `Streamlit-option-menu is a simple Streamlit component that allows users to select a single item from a
 
-  `                                         `list of options in a menu.
+  ` `list of options in a menu.
 
-  `                                         `To know more about Streamlit-Option-Menu. Click here [https://discuss.streamlit.io/t/streamlit-option-                                             menu-is-a-simple-streamlit-component-that-allows-users-to-select-a-single-item-from-a-list-of-options-in-a-menu/20514](https://discuss.streamlit.io/t/streamlit-option-%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20menu-is-a-simple-streamlit-component-that-allows-users-to-select-a-single-item-from-a-list-of-options-in-a-menu/20514)
+  ` `To know more about Streamlit-Option-Menu. Click here [https://discuss.streamlit.io/t/streamlit-option-                                             menu-is-a-simple-streamlit-component-that-allows-users-to-select-a-single-item-from-a-list-of-options-in-a-menu/20514](https://discuss.streamlit.io/t/streamlit-option-%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20menu-is-a-simple-streamlit-component-that-allows-users-to-select-a-single-item-from-a-list-of-options-in-a-menu/20514)
 
 **Install Packages:**
 
