@@ -178,17 +178,21 @@ def closingdriver():
     except Exception as e:
         print("The closingdriver Error reason: ",e)    
 
-
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 # Initialize the Chrome driver
 driver = webdriver.Chrome() 
 HomePage_driver(driver)
+
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 # Extracting the PagesLink of the each States and also State Names
 secondpage_link = driver.find_elements(By.XPATH,"//a[@class='OfferSection__ViewAllText-sc-16xojcc-1 eVcjqm']")[1].get_attribute('href')
 States_Page_Links,StatesNames = StatesPage_Link(secondpage_link)
 df = pd.DataFrame(data=States_Page_Links,columns=['States link'])
 time.sleep(2)
+
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 # Extracting the BusRoutesLinks from all the States
 busrouteslink,routelink = BusRoutes_link(States_Page_Links,StatesNames)
@@ -197,11 +201,15 @@ df2.to_csv('route_data6.csv',index=False,mode='w')
 print(busrouteslink,routelink)
 print(df2.to_string(),"\n")
 
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
 # Extracting the Bus details from all the bus routes 
 busdetails = BUSDETAILS(routelink)
 df3 = pd.DataFrame(data=busdetails,columns=['Bus_NO','Bus Name','Bus Type','Departure Time','Travelling Time','Reaching Time','Bus Rating','Ticket Price','Seat Availability'])   
 df3.to_csv('bus_data6.csv', index=False,mode='w')
 print(df3.to_string(),"\n")
+
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 # Closing the Driver 
 closingdriver()

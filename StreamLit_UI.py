@@ -54,18 +54,25 @@ def fetch_filtered_value(conn, query):
     except Error as e:
         st.error(f"Error occurred when fetching filtered value: {e}")
         return pd.DataFrame()
-
+    
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+#Connecting with the Sql database
 conn = connection()
 st.set_page_config(page_title="Redbus", page_icon=":oncoming_bus:", layout="wide")
+
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 # Load custom CSS from file
 with open("Customization_styles.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 # Title and welcome message
 st.title("REDBUS - Bus Ticket Booking 🚍")
 st.markdown("**Welcome to Redbus! 👉 Find and book bus tickets easily. Use the filters below to search for buses 🔍.**")
+
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 # Sidebar with image and filter options
 bus_image_url = "https://media.istockphoto.com/id/1312644983/vector/modern-city-passenger-bus-against-the-background-of-an-abstract-cityscape-vector-illustration.jpg?s=612x612&w=0&k=20&c=QNTyvmklpvs4cT-JzD-DjmdK_EsN8Wh6I5sLZ9UoB_E="
@@ -90,6 +97,8 @@ price_range = st.sidebar.slider("**Price Range**", 0, 3000, (0, 3000))
 rating_range = st.sidebar.slider("**Star Rating**", 0, 5, (0, 5))
 departure_range = st.sidebar.slider("**Departure Time (Hour)**", 0, 24, (0, 24))
 
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
 # Main Page Layout
 col1, col2 = st.columns(2)
 
@@ -105,6 +114,8 @@ with col2:
         route = st.selectbox("**Routes**", ['--- select route ---'] + routes)
     else:
         route = st.selectbox("**Routes**", ['--- select route ---'])
+
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 # Search Button
 if st.button("**Search**"):

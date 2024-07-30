@@ -18,6 +18,16 @@ def SQL_Connection():
 
     return conn,cursor
 
+def drop_table(conn,query_drop):
+    # this function will drop the table
+    c=conn.cursor()
+    try:
+        c.execute(query_drop)
+        print("Table dropped successfully")
+    
+    except Error as e:
+        print("Error occurred when dropping data",e)
+
 #this ReadData_From_Excel will read the data from the .csv file
 def ReadData_From_Excel(file_path):
     try:
@@ -54,15 +64,18 @@ def Close_Connection(conn,cursor):
     try:
         cursor.close()
     except Exception as e:
-        print('\nError in closing the cursor: ', e)    
+        print('\nError in closing the cursor: ', e)          
 
 "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
-
-
-
 #Connect the Sql Server 
 conn,cursor = SQL_Connection()    
+
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
+# if the table already exists drop it to avoid the append of datas
+drop_table(conn,"drop table if exists BusDetails")
+drop_table(conn,"drop table if exists BusRoutesAndLinks")  
 
 "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
@@ -80,7 +93,9 @@ df1= ReadData_From_Excel(busdetails)
 df1["Bus Rating"] = df1["Bus Rating"].fillna(0)
 print("\n",df1)
 
-# Print out the values causing issues
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
+# checking the Bus_NO values are present in the Route_NO
 for bus_no in df1['Bus_NO']:
     if bus_no not in df['Route_NO'].values:
         print(f"Bus_No {bus_no} in bus_data.csv does not match any Route_NO in route_data.csv")
@@ -104,12 +119,12 @@ Create_Table (cursor,"""CREATE table IF NOT EXISTS BusDetails(
               Bus_No int not null,
               Bus_Name varchar(100) not null,
               Bus_Type varchar(100) not null,
-              Departure_Time varchar(50) not null,
+              Departure_Time time not null,
               Travelling_Time varchar(50) not null,
-              Reaching_Time varchar(50) not null,
+              Reaching_Time time not null,
               Bus_rating FLOAT not null,
-              Ticket_Price FLOAT not null,
-              Seat_Availability varchar(50) not null);"""
+              Ticket_Price decimal not null,
+              Seat_Availability int not null);"""
               )
 
 "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
