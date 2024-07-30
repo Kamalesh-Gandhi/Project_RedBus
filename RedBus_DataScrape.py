@@ -48,7 +48,7 @@ def BusRoutes_link(States_Page_Links,StatesNames):
     try:
         Busrouteslinks = []
         Routes_link  = []
-        Route_NO=275
+        Route_NO= 1
         x = 0
         wait = WebDriverWait(driver, 10)
 
@@ -112,7 +112,7 @@ def BUSDETAILS(busrouteslink):
     try:
 
         BusDetails = []
-        Bus_NO = 275
+        Bus_NO = 1
         for link in busrouteslink:
 
             print( "The link: ", link,"\n")
