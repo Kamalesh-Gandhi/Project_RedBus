@@ -72,11 +72,12 @@ Selenium Python bindings provide a convenient API to access Selenium WebDrivers 
 - **MySQL** **Connector**– pip install mysql-connector-python
 - **Streamlit-Option-Menu** – pip install streamlit-option-menu
 
-**This project contains two files**
+**This project contains four files**
 
 1) RedBus\_DataScrape.py
 1) RedBus\_SQL\_DataBaseHandle.py
 1) StreamLit\_UI.py
+1) Customization_styles.css
 
 **1) RedBus\_DataScrape.py**
 
