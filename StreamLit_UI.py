@@ -3,6 +3,16 @@ import mysql.connector as sconn
 from mysql.connector import Error
 import pandas as pd
 import time
+import numpy as np
+
+st.set_page_config(page_title="Redbus", page_icon=":oncoming_bus:", layout="wide")
+
+def timedelta_to_hhmm(value):
+    #this function will convert the timedelta format into HH:MM
+    t_seconds = value.seconds
+    hours = t_seconds//3600  # 1hour = 3600 seconds
+    minutes = (t_seconds%3600)//60 #1hour = 60minutes and 3600seconds
+    return f"{hours:02}:{minutes:02}" #formatiing to display the time in 00:00 format
 
 def configuration():
     try:
@@ -48,19 +58,20 @@ def fetch_filtered_value(conn, query):
         columns = [col[0] for col in c.description]
         data = c.fetchall()
         df = pd.DataFrame(data, columns=columns)
-        if "Bus_rating" in df.columns:
-            df["Bus_rating"] = df["Bus_rating"].apply(lambda rating: "NA" if rating == 0.0 else rating)
+        if "Departure_Time" in df.columns:
+            df["Departure_Time"] = df["Departure_Time"].apply(timedelta_to_hhmm)
+        if "Reaching_Time" in df.columns:
+            df["Reaching_Time"] = df["Reaching_Time"].apply(timedelta_to_hhmm)
+        if "star_rating" in df.columns:
+            df['star_rating'] = df['star_rating'].replace(0.0, np.nan)
         return df
     except Error as e:
         st.error(f"Error occurred when fetching filtered value: {e}")
         return pd.DataFrame()
-    
-"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
-#Connecting with the Sql database
-conn = connection()
-st.set_page_config(page_title="Redbus", page_icon=":oncoming_bus:", layout="wide")
 
 "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
+conn = connection()
 
 # Load custom CSS from file
 with open("Customization_styles.css") as f:
@@ -78,6 +89,8 @@ st.markdown("**Welcome to Redbus! 👉 Find and book bus tickets easily. Use the
 bus_image_url = "https://media.istockphoto.com/id/1312644983/vector/modern-city-passenger-bus-against-the-background-of-an-abstract-cityscape-vector-illustration.jpg?s=612x612&w=0&k=20&c=QNTyvmklpvs4cT-JzD-DjmdK_EsN8Wh6I5sLZ9UoB_E="
 st.sidebar.image(bus_image_url, use_column_width=True)
 
+"---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+
 st.markdown("""
 <style>
     [data-testid=stSidebar] {
@@ -93,9 +106,9 @@ bus_type_query = "SELECT DISTINCT Bus_Type FROM BusDetails;"
 bus_types = fetch_distinct_value(conn, bus_type_query)
 bus_type = st.sidebar.selectbox("**Seat Type**", ['--- select bus type ---'] + ['All'] + bus_types)
 
-price_range = st.sidebar.slider("**Price Range**", 0, 3000, (0, 3000))
-rating_range = st.sidebar.slider("**Star Rating**", 0, 5, (0, 5))
-departure_range = st.sidebar.slider("**Departure Time (Hour)**", 0, 24, (0, 24))
+price_range = st.sidebar.slider("**Price Range**", 0, 3000, (0, 3000),100)
+rating_range = st.sidebar.slider("**Star Rating**", 0, 5, (0, 5),1)
+departure_range = st.sidebar.slider("**Departure Time (Hour)**", 0, 24, (0, 24),1)
 
 "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
@@ -143,5 +156,3 @@ if st.button("**Search**"):
             st.write("No buses available for the selected criteria.")
     else:
         st.write("Please select a state and route to search for buses.")
-
-
