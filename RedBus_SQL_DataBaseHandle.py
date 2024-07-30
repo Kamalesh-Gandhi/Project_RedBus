@@ -77,8 +77,15 @@ print("\n",df)
 #Read Data From the Excel
 busdetails = 'bus_data.csv'
 df1= ReadData_From_Excel(busdetails)
-df1["star_rating"] = df1["star_rating"].fillna(0)
+df1["Bus Rating"] = df1["Bus Rating"].fillna(0)
 print("\n",df1)
+
+# Print out the values causing issues
+for bus_no in df1['Bus_NO']:
+    if bus_no not in df['Route_NO'].values:
+        print(f"Bus_No {bus_no} in bus_data.csv does not match any Route_NO in route_data.csv")
+        break
+
 
 "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
 
@@ -102,8 +109,7 @@ Create_Table (cursor,"""CREATE table IF NOT EXISTS BusDetails(
               Reaching_Time varchar(50) not null,
               Bus_rating FLOAT not null,
               Ticket_Price FLOAT not null,
-              Seat_Availability varchar(50) not null,
-              FOREIGN KEY(Bus_No) REFERENCES BusRoutesAndLinks(Route_No));"""
+              Seat_Availability varchar(50) not null);"""
               )
 
 "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
@@ -140,7 +146,7 @@ Insert_query1 = """
         Seat_Availability = VALUES(Seat_Availability)
 """
 
-data1 = df1.to_numpy().tolist() #converting the data into list of tuples to insert into the table
+data1 = df1[['Bus_NO', 'Bus Name', 'Bus Type', 'Departure Time', 'Travelling Time', 'Reaching Time', 'Bus Rating', 'Ticket Price', 'Seat Availability']].to_numpy().tolist() #converting the data into list of tuples to insert into the table
 Insert_Table(cursor,Insert_query1,data1)
  
 "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------"

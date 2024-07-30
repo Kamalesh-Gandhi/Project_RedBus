@@ -33,9 +33,10 @@ def StatesPage_Link(states_driver):
         States_Names = []
 
         #Getting the values of the href(Links of the States
-        for i in states[:13]:
+        for i in states[13:14]:
             States_link.append(i.get_attribute('href'))   
             States_Names.append(i.text)
+        print(States_Names,'\n')    
     
     except Exception as e:
         print("The StatesPageLink Error Reason: ", e)
@@ -47,7 +48,7 @@ def BusRoutes_link(States_Page_Links,StatesNames):
     try:
         Busrouteslinks = []
         Routes_link  = []
-        Route_NO=1
+        Route_NO=275
         x = 0
         wait = WebDriverWait(driver, 10)
 
@@ -111,7 +112,7 @@ def BUSDETAILS(busrouteslink):
     try:
 
         BusDetails = []
-        Bus_NO = 1
+        Bus_NO = 275
         for link in busrouteslink:
 
             print( "The link: ", link,"\n")
@@ -169,17 +170,6 @@ def BUSDETAILS(busrouteslink):
 
     return BusDetails
 
-# This function will append data to an existing CSV file or create it if it doesn't exist
-def append_to_csv(file_path, df):
-    try:
-        if os.path.exists(file_path):
-            existing_df = pd.read_csv(file_path)
-            df = pd.concat([existing_df, df], ignore_index=True)
-        df.to_csv(file_path, index=False)
-        print(f"Data appended to {file_path}")
-    except Exception as e:
-        print(f"Error appending to CSV: {e}")
-
 # This closingdriver will close the driver
 def closingdriver():
     try:
@@ -187,6 +177,8 @@ def closingdriver():
 
     except Exception as e:
         print("The closingdriver Error reason: ",e)    
+
+
 
 # Initialize the Chrome driver
 driver = webdriver.Chrome() 
@@ -201,17 +193,15 @@ time.sleep(2)
 # Extracting the BusRoutesLinks from all the States
 busrouteslink,routelink = BusRoutes_link(States_Page_Links,StatesNames)
 df2 = pd.DataFrame(data=busrouteslink,columns=['Route_NO','States Transportation Name','Bus Routes','Bus Routes Link']) 
-append_to_csv('route_data.csv', df2)
-# df2.to_csv('busRoutesLinks.csv',index=False,mode='w')
+df2.to_csv('route_data6.csv',index=False,mode='w')
 print(busrouteslink,routelink)
 print(df2.to_string(),"\n")
 
 # Extracting the Bus details from all the bus routes 
 busdetails = BUSDETAILS(routelink)
 df3 = pd.DataFrame(data=busdetails,columns=['Bus_NO','Bus Name','Bus Type','Departure Time','Travelling Time','Reaching Time','Bus Rating','Ticket Price','Seat Availability'])   
-append_to_csv('bus_data.csv', df3) 
-# df3.to_csv('bus_details4.csv', index=False,mode='w')
-print(df3,"\n")
+df3.to_csv('bus_data6.csv', index=False,mode='w')
+print(df3.to_string(),"\n")
 
 # Closing the Driver 
 closingdriver()
